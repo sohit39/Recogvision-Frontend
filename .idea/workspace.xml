@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="508dd1f5-f915-4dfe-aec9-200efd6cd368" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/recogvision/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/recogvision/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recogvision/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/recogvision/pubspec.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recogvision/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="83" lean-forward="true" selection-start-line="62" selection-start-column="83" selection-end-line="62" selection-end-column="83" />
+            <state relative-caret-position="374">
+              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -189,8 +188,8 @@
     <editor active="true" />
     <layout>
       <window_info id="Build Variants" side_tool="true" />
-      <window_info active="true" id="Captures" order="0" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.25373134" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49919224" visible="true" weight="0.25373134" />
+      <window_info id="Captures" order="0" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.25373134" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49919224" visible="true" weight="0.25373134" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -257,8 +256,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recogvision/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="83" lean-forward="true" selection-start-line="62" selection-start-column="83" selection-end-line="62" selection-end-column="83" />
+        <state relative-caret-position="374">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>

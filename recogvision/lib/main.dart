@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: new ThemeData.dark(),
       home: Live(),
     );
   }
@@ -55,52 +56,70 @@ class PersonList extends StatelessWidget{
                 color: Colors.black,
               )
             ),
-            person(NetworkImage("https://www.biography.com/.image/t_share/MTQyMDA0NDgwMzUzNzcyNjA2/mark-zuckerberg_gettyimages-512304736jpg.jpg"), "Tony Riley"),
-            person(NetworkImage("C:/Users/antho/Pictures/zuck.jpg"), "Dean Zhou"),
-            person(NetworkImage("C:/Users/antho/Pictures/zuck.jpg"), "Sohit Gatiganti"),
-            person(NetworkImage("C:/Users/antho/Pictures/zuck.jpg"), "Aaron Li"),
-            person(NetworkImage("C:/Users/antho/Pictures/zuck.jpg"), "Random Kid"),
-            person(NetworkImage("C:/Users/antho/Pictures/zuck.jpg"), "Patti Jeff"),
-            person(NetworkImage("C:/Users/antho/Pictures/zuck.jpg"), "Kappa Pride"),
-            person(NetworkImage("C:/Users/antho/Pictures/zuck.jpg"), "Eugene Tian"),
-            person(NetworkImage("C:/Users/antho/Pictures/zuck.jpg"), "Coca Cola"),
+            Person("Tony Riley", NetworkImage("https://i.imgur.com/9Di8DOg.jpeg")),
           ]
         )
     );
   }
 }
+class Person extends StatefulWidget{
+  @override
+  Person(this.name, this.avatar);
+  final String name;
+  final NetworkImage avatar;
+  PersonState createState() => PersonState(name, avatar);
+}
 
-Card person(NetworkImage avatar, String name) => Card(
+class PersonState extends State<Person>{
+  PersonState(this.name, this.avatar);
+  String name;
+  NetworkImage avatar;
+  Widget build(BuildContext context) {
+    return Card(
       child:ExpansionTile(
-        title: Text(name,
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 20,
-            )
-        ),
-        leading: CircleAvatar(
-          backgroundImage: avatar,
-          radius: 25,
-        ),
-        children: <Widget> [
-          Column(
-            children:<Widget>[
-              TextFormField(
-                decoration: const InputDecoration(
-                  hintText: "Name",
-                ),
-                maxLines: 1,
-              ),
-              TextFormField(
-                decoration: const InputDecoration(
-                  hintText: "Additional Info",
-                ),
-                minLines: 1,
-                maxLines: 3,
-                maxLength: 250,
+          title: Text(
+              name,
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 20,
               )
-            ]
-          )
-        ]
+          ),
+          leading: CircleAvatar(
+            backgroundImage: avatar,
+            radius: 25,
+          ),
+          children: <Widget> [
+            Column(
+                children:<Widget>[
+                  TextFormField(
+                    initialValue: name,
+                    decoration: const InputDecoration(
+                      hintText: "Name",
+                    ),
+                    maxLines: 1,
+                    onChanged: (String input){
+                      changeNameTo(input);
+                    },
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: "Additional Info",
+                    ),
+                    minLines: 1,
+                    maxLines: 3,
+                    maxLength: 250,
+                  )
+                ]
+            )
+          ]
       ),
     );
+  }
+
+  void changeNameTo(String i){
+    setState(() {
+      name = i;
+    });
+  }
+
+}
